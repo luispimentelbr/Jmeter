@@ -25,13 +25,13 @@
         <stringProp name="TestPlan.comments">Definindo o Ambiente de Teste</stringProp>
       </Arguments>
       <hashTree/>
-      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
         <collectionProp name="CookieManager.cookies"/>
         <boolProp name="CookieManager.clearEachIteration">false</boolProp>
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
         <boolProp name="clearEachIteration">false</boolProp>
         <boolProp name="useExpires">true</boolProp>
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
@@ -64,6 +64,7 @@
       <hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Fluxo - home &gt; Reserva &gt; Compra &gt; Finaliza">
           <stringProp name="TestPlan.comments">Modulo</stringProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -75,7 +76,7 @@
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Reserva 70%">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Reserva 70%" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -87,7 +88,7 @@
             <stringProp name="TestPlan.comments">Funil de Acesso</stringProp>
           </ThroughputController>
           <hashTree>
-            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Reserva">
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Reserva" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
                 <stringProp name="764597751">Test Plan</stringProp>
@@ -96,7 +97,7 @@
               </collectionProp>
             </ModuleController>
             <hashTree>
-              <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Compra 50%">
+              <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Compra 50%" enabled="true">
                 <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">false</boolProp>
                 <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -108,7 +109,7 @@
                 <stringProp name="TestPlan.comments">Funil de Acesso</stringProp>
               </ThroughputController>
               <hashTree/>
-              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Compra">
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Compra" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
                   <stringProp name="764597751">Test Plan</stringProp>
@@ -163,13 +164,13 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="home"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="home" enabled="true"/>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="home">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="home" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/" enabled="true">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.protocol">${SCHEME}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -227,13 +228,13 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Reserva"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Reserva" enabled="true"/>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Reserva">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Reserva" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/reserve.php">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/reserve.php" enabled="true">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.protocol">${SCHEME}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -324,7 +325,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/purchase.php">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/purchase.php" enabled="true">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.protocol">${SCHEME}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -436,7 +437,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/confirmation.php">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://blazedemo.com/confirmation.php" enabled="true">
             <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
             <stringProp name="HTTPSampler.protocol">${SCHEME}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
