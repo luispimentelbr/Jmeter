@@ -17,4 +17,3 @@ Para executar por linha de comando, digite no Prompt de Comando:
 jmeter -n -t C:\(caminho do seu jneter)\bin\Teste02.jmx -l C:\(caminho do seu jneter)\bin\Treinamento1\resultado.jtl -e -o C:\(caminho do seu jneter)\bin\Treinamento1\Relatorio
     
 Jmeter - Version 5.6.3
-
